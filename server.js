@@ -1,10 +1,8 @@
 const express = require('express')
 const app = express()
 const port = 3000
-const lesson1Controllers = require('./controllers/lesson1')
 
-app.use('/juanita', lesson1Controllers.juanitaRouter);
-app.use('/bugs', lesson1Controllers.bugsRouter);
+app.use('/', require('./routes/indexs'));
 
 
 app.listen(port, () => {
